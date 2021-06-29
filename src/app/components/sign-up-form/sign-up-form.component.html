@@ -1,0 +1,61 @@
+<div class="root">
+    <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+        <div class="form-box">
+            <div>
+                <h1>Sign Up</h1>
+
+                <input type="text" required placeholder="First name" name="firstName" [(ngModel)]="firstName">
+            </div>
+
+            <div>
+
+                <input type="text" required placeholder="Last name" name="lastName" [(ngModel)]="lastName">
+            </div>
+
+            <div>
+
+                <input type="number" required placeholder="Phone" name="phone" [(ngModel)]="phone">
+            </div>
+
+            <div>
+
+                <input type="text" required placeholder="E-mail" name="email" [(ngModel)]="Email">
+            </div>
+
+            <div>
+
+                <input type="text" placeholder="Password" required name="password" [(ngModel)]="password">
+            </div>
+
+            <div>
+
+                <input type="text" placeholder="Confirm Password" required name="ConfirmedPassword"
+                    [(ngModel)]="ConfirmedPassword">
+            </div>
+
+            <div>
+
+                <button type="button" [disabled]="!itemForm.valid">Create Account</button>
+                <br>
+                <br>
+
+                <button type="button" (click)="toggleForm()">Back to log in</button>
+            </div>
+            <p>or sign with :</p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <p>By clicking Sign up you agree to our terms of service.</p>
+
+        </div>
+
+
+
+
+    </form>
+
+
+
+</div>

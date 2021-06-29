@@ -1,0 +1,26 @@
+<div class="root">
+    <form #itemForm="ngForm" (ngSumbit)="onSubmit(itemForm)">
+        <div class="form-box">
+            
+        <div>
+            
+            <label>Email</label>
+            <input type="text" [(ngModel)]="Email" name="Email" required>
+        </div>
+
+        <div>
+          <label>password</label>
+           <input type="text" [(ngModel)]="password" name="password" required>
+        </div>
+
+        <div>
+           <button type="button" [disabled]="!itemForm.valid">Log In</button>
+           <br>
+           <br>
+           <button type="button" (click)="toggleForm()" >Create an account</button>
+        </div>
+
+    </div>
+    </form>
+
+</div>
